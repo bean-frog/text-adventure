@@ -1,0 +1,118 @@
+{
+  "entries": [
+    {
+      "id": 1,
+      "text": "You find yourself in a dark room. What do you do?",
+      "options": {
+        "1": {
+          "text": "Look for a light switch",
+          "next_id": 2
+        },
+        "2": {
+          "text": "Feel around for a door",
+          "next_id": 3
+        }
+      }
+    },
+    {
+      "id": 2,
+      "text": "You flick a switch and the room lights up. You see a door. What now?",
+      "options": {
+        "1": {
+          "text": "Open the door",
+          "next_id": 4
+        },
+        "2": {
+          "text": "Inspect the room",
+          "next_id": 5
+        }
+      }
+    },
+    {
+      "id": 3,
+      "text": "You find a door and manage to open it. You step into a hallway. What next?",
+      "options": {
+        "1": {
+          "text": "Go left",
+          "next_id": 6
+        },
+        "2": {
+          "text": "Go right",
+          "next_id": 7
+        }
+      }
+    },
+    {
+      "id": 4,
+      "text": "You step through the door and find yourself outside. Congratulations, you've escaped!",
+      "options": {}
+    },
+    {
+      "id": 5,
+      "text": "You spend some time inspecting the room but find nothing of interest. What now?",
+      "options": {
+        "1": {
+          "text": "Go back to the door",
+          "next_id": 3
+        },
+        "2": {
+          "text": "Continue searching the room",
+          "next_id": 8
+        }
+      }
+    },
+    {
+      "id": 6,
+      "text": "You turn left and encounter a locked door. What do you do?",
+      "options": {
+        "1": {
+          "text": "Try to pick the lock",
+          "next_id": 9
+        },
+        "2": {
+          "text": "Go back",
+          "next_id": 3
+        }
+      }
+    },
+    {
+      "id": 7,
+      "text": "You turn right and find yourself in front of an elevator. What now?",
+      "options": {
+        "1": {
+          "text": "Take the elevator",
+          "next_id": 10
+        },
+        "2": {
+          "text": "Look for stairs",
+          "next_id": 11
+        }
+      }
+    },
+    {
+      "id": 8,
+      "text": "You search the room further and find a key hidden under the bed. You take it and go back to the door.",
+      "options": {
+        "1": {
+          "text": "Use the key to unlock the door",
+          "next_id": 4
+        }
+      }
+    },
+    {
+      "id": 9,
+      "text": "You manage to pick the lock and find yourself in a secret room. You win!",
+      "options": {}
+    },
+    {
+      "id": 10,
+      "text": "You take the elevator and it brings you to the ground floor. You escape!",
+      "options": {}
+    },
+    {
+      "id": 11,
+      "text": "You search for stairs but find none. You decide to take the elevator instead.",
+      "options": {}
+    }
+  ]
+}
