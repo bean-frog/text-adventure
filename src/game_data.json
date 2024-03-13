@@ -2,117 +2,128 @@
   "entries": [
     {
       "id": 1,
-      "text": "You find yourself in a dark room. What do you do?",
+      "text": "You awaken in a dimly lit laboratory, the air thick with the stench of decay. Memories are hazy, but one thing is clear: you're not alone. Grotesque mutants, once human, now roam the corridors, their twisted forms a result of experiments gone horribly wrong. As you struggle to survive, you realize that the key to escaping this nightmare lies deep within the heart of the facility.",
       "options": {
         "1": {
-          "text": "Look for a light switch",
+          "text": "Investigate the nearby computer terminal.",
           "next_id": 2
         },
         "2": {
-          "text": "Feel around for a door",
+          "text": "Search for an exit.",
           "next_id": 3
         }
       }
     },
     {
       "id": 2,
-      "text": "You flick a switch and the room lights up. You see a door. What now?",
+      "text": "You approach the flickering computer terminal, the screen casting an eerie glow in the darkness. As you begin to navigate the labyrinth of code, a sudden chill runs down your spine. Behind you, a figure emerges from the shadows - the Glitcher.",
       "options": {
         "1": {
-          "text": "Open the door",
+          "text": "Attempt to debug the Glitcher's code.",
           "next_id": 4
         },
         "2": {
-          "text": "Inspect the room",
+          "text": "Evade the Glitcher and continue your search for an exit.",
           "next_id": 5
         }
       }
     },
     {
       "id": 3,
-      "text": "You find a door and manage to open it. You step into a hallway. What next?",
+      "text": "You weave through the labyrinthine corridors, your footsteps echoing in the silence. Suddenly, you hear a cacophony of static, and the ground begins to tremble beneath your feet. The Data Eater emerges from the darkness, its cables thrashing wildly as it hungrily seeks its next meal - your data.",
       "options": {
         "1": {
-          "text": "Go left",
+          "text": "Protect vital systems and find a way to overload the Data Eater's circuits.",
           "next_id": 6
         },
         "2": {
-          "text": "Go right",
+          "text": "Retreat and seek an alternate route to avoid confrontation with the Data Eater.",
           "next_id": 7
         }
       }
     },
     {
       "id": 4,
-      "text": "You step through the door and find yourself outside. Congratulations, you've escaped!",
-      "options": {}
+      "text": "You delve into the code, your fingers flying across the keyboard as you attempt to unravel the Glitcher's secrets. With each line of code you debug, you edge closer to victory, until finally, the Glitcher's form flickers and fades into nothingness. With the immediate threat neutralized, you press on deeper into the heart of the laboratory.",
+      "options": {
+        "1": {
+          "text": "Continue your journey into the depths.",
+          "next_id": 8
+        }
+      }
     },
     {
       "id": 5,
-      "text": "You spend some time inspecting the room but find nothing of interest. What now?",
+      "text": "You dart away from the Glitcher, your heart pounding in your chest as you flee deeper into the labyrinth. Though you've evaded immediate danger, you know that the nightmare is far from over. With each step you take, you steel yourself for the horrors that await.",
       "options": {
         "1": {
-          "text": "Go back to the door",
-          "next_id": 3
-        },
-        "2": {
-          "text": "Continue searching the room",
+          "text": "Continue your search for an exit.",
           "next_id": 8
         }
       }
     },
     {
       "id": 6,
-      "text": "You turn left and encounter a locked door. What do you do?",
+      "text": "You spring into action, your mind racing as you assess the situation. With quick thinking and steady hands, you manage to protect vital systems from the Data Eater's onslaught while simultaneously finding a way to overload its circuits. With a deafening roar, the Data Eater collapses in a shower of sparks, defeated.",
       "options": {
         "1": {
-          "text": "Try to pick the lock",
-          "next_id": 9
-        },
-        "2": {
-          "text": "Go back",
-          "next_id": 3
+          "text": "Press on towards the heart of the laboratory.",
+          "next_id": 8
         }
       }
     },
     {
       "id": 7,
-      "text": "You turn right and find yourself in front of an elevator. What now?",
+      "text": "You retreat from the Data Eater, your footsteps echoing in the darkness as you seek an alternate route. Though you've managed to evade immediate danger, you know that the Data Eater's hunger is insatiable. With each passing moment, you edge closer to the heart of the laboratory, where the true horrors await.",
       "options": {
         "1": {
-          "text": "Take the elevator",
-          "next_id": 10
-        },
-        "2": {
-          "text": "Look for stairs",
-          "next_id": 11
+          "text": "Continue your journey into the depths.",
+          "next_id": 8
         }
       }
     },
     {
       "id": 8,
-      "text": "You search the room further and find a key hidden under the bed. You take it and go back to the door.",
+      "text": "With each obstacle overcome, you draw closer to the heart of the facility. The air grows thick with tension as you stand on the precipice of discovery. What secrets lie hidden within the depths of the Infected Laboratory? Only time will tell.",
       "options": {
         "1": {
-          "text": "Use the key to unlock the door",
-          "next_id": 4
+          "text": "Descend further into the depths, determined to uncover the truth.",
+          "next_id": 9
+        },
+        "2": {
+          "text": "Retreat from the laboratory, abandoning all hope of unraveling its mysteries.",
+          "next_id": 10
         }
       }
     },
     {
       "id": 9,
-      "text": "You manage to pick the lock and find yourself in a secret room. You win!",
-      "options": {}
+      "text": "As you venture deeper into the heart of darkness, you come face to face with the source of the outbreak - a twisted amalgamation of flesh and circuitry, the embodiment of humanity's folly. With every fiber of your being, you must fight to survive, for the fate of the world hangs in the balance.",
+      "options": {
+        "1": {
+          "text": "Engage in a battle to the death, determined to put an end to the nightmare once and for all.",
+          "next_id": 11
+        },
+        "2": {
+          "text": "Retreat and seek refuge in the shadows, biding your time until another opportunity presents itself.",
+          "next_id": 12
+        }
+      }
     },
     {
-      "id": 10,
-      "text": "You take the elevator and it brings you to the ground floor. You escape!",
-      "options": {}
+    	"id": 10,
+    	"text": "you chicken out, lame",
+    	"options": {}
     },
     {
-      "id": 11,
-      "text": "You search for stairs but find none. You decide to take the elevator instead.",
-      "options": {}
+    	"id": 11,
+    	"text": "you fight the thingy",
+    	"options": {}
+    },
+    {
+    	"id": 12,
+    	"text": "you hide, lame",
+    	"options": {}
     }
   ]
 }
