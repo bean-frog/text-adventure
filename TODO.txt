@@ -1,0 +1,3 @@
+Don't display game over text if the user escaped
+finish byte bender fight
+when you die, add the option to go back 1 choice and retry

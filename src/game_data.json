@@ -2,128 +2,315 @@
   "entries": [
     {
       "id": 1,
-      "text": "You awaken in a dimly lit laboratory, the air thick with the stench of decay. Memories are hazy, but one thing is clear: you're not alone. Grotesque mutants, once human, now roam the corridors, their twisted forms a result of experiments gone horribly wrong. As you struggle to survive, you realize that the key to escaping this nightmare lies deep within the heart of the facility.",
+      "text": "You slowly gain consciousness. As your eyes open, you discover that you are in an abandoned laboratory, but you have no idea how you got there, or more importantly, how to get out. A tingle runs down your spine as you stand up in a dimly lit room that smells of mildew. What is your first move?",
       "options": {
         "1": {
-          "text": "Investigate the nearby computer terminal.",
+          "text": "Search the room",
           "next_id": 2
         },
         "2": {
-          "text": "Search for an exit.",
-          "next_id": 3
+          "text": "Leave the room immediately",
+          "next_id": 9
         }
       }
     },
     {
       "id": 2,
-      "text": "You approach the flickering computer terminal, the screen casting an eerie glow in the darkness. As you begin to navigate the labyrinth of code, a sudden chill runs down your spine. Behind you, a figure emerges from the shadows - the Glitcher.",
+      "text": "You don't find anything else, all thats's in the room is a carpet and a wall tapestry",
       "options": {
         "1": {
-          "text": "Attempt to debug the Glitcher's code.",
-          "next_id": 4
+          "text": "Keep searching",
+          "next_id": 3
         },
         "2": {
-          "text": "Evade the Glitcher and continue your search for an exit.",
-          "next_id": 5
+          "text": "Leave the room",
+          "next_id": 9
         }
       }
     },
     {
       "id": 3,
-      "text": "You weave through the labyrinthine corridors, your footsteps echoing in the silence. Suddenly, you hear a cacophony of static, and the ground begins to tremble beneath your feet. The Data Eater emerges from the darkness, its cables thrashing wildly as it hungrily seeks its next meal - your data.",
+      "text": "You find a rusty crowbar in the corner and get the wall tapestry off. There's a window!",
       "options": {
         "1": {
-          "text": "Protect vital systems and find a way to overload the Data Eater's circuits.",
-          "next_id": 6
+          "text": "Try to climb out the window",
+          "next_id": 4
         },
         "2": {
-          "text": "Retreat and seek an alternate route to avoid confrontation with the Data Eater.",
-          "next_id": 7
+          "text": "Don't climb out the window, use the door instead.",
+          "next_id": 9
         }
       }
     },
     {
       "id": 4,
-      "text": "You delve into the code, your fingers flying across the keyboard as you attempt to unravel the Glitcher's secrets. With each line of code you debug, you edge closer to victory, until finally, the Glitcher's form flickers and fades into nothingness. With the immediate threat neutralized, you press on deeper into the heart of the laboratory.",
+      "text": "Yikes! You're 7 storeys up, much too high to jump. Maybe there's a ledge?",
       "options": {
         "1": {
-          "text": "Continue your journey into the depths.",
-          "next_id": 8
+          "text": "Feel for a ledge to the right.",
+          "next_id": 12
+        },
+        "2": {
+          "text": "Feel for a ledge to the left.",
+          "next_id": 5
         }
       }
     },
     {
       "id": 5,
-      "text": "You dart away from the Glitcher, your heart pounding in your chest as you flee deeper into the labyrinth. Though you've evaded immediate danger, you know that the nightmare is far from over. With each step you take, you steel yourself for the horrors that await.",
+      "text": "There is a ledge!",
       "options": {
         "1": {
-          "text": "Continue your search for an exit.",
-          "next_id": 8
+          "text": "Climb on to the ledge",
+          "next_id": 13
+        },
+        "2": {
+          "text": "Don't risk falling and go back inside.",
+          "next_id": 6
         }
       }
     },
     {
       "id": 6,
-      "text": "You spring into action, your mind racing as you assess the situation. With quick thinking and steady hands, you manage to protect vital systems from the Data Eater's onslaught while simultaneously finding a way to overload its circuits. With a deafening roar, the Data Eater collapses in a shower of sparks, defeated.",
+      "text": "You retreat back into the room.",
       "options": {
         "1": {
-          "text": "Press on towards the heart of the laboratory.",
-          "next_id": 8
+          "text": "Stay in the room.",
+          "next_id": 7
+        },
+        "2": {
+          "text": "Go out the door.",
+          "next_id": 9
         }
       }
     },
     {
       "id": 7,
-      "text": "You retreat from the Data Eater, your footsteps echoing in the darkness as you seek an alternate route. Though you've managed to evade immediate danger, you know that the Data Eater's hunger is insatiable. With each passing moment, you edge closer to the heart of the laboratory, where the true horrors await.",
+      "text": "You're extremely dehydrated.",
       "options": {
         "1": {
-          "text": "Continue your journey into the depths.",
+          "text": "No I'm not. I'll be fine.",
+          "next_id": 14
+        },
+        "2": {
+          "text": "Look for some water",
           "next_id": 8
         }
       }
     },
     {
       "id": 8,
-      "text": "With each obstacle overcome, you draw closer to the heart of the facility. The air grows thick with tension as you stand on the precipice of discovery. What secrets lie hidden within the depths of the Infected Laboratory? Only time will tell.",
+      "text": "You see a rusty pipe with a little bit of water in it. Take the chances and drink it?",
       "options": {
         "1": {
-          "text": "Descend further into the depths, determined to uncover the truth.",
-          "next_id": 9
+          "text": "Yes",
+          "next_id": 15
         },
         "2": {
-          "text": "Retreat from the laboratory, abandoning all hope of unraveling its mysteries.",
-          "next_id": 10
+          "text": "No",
+          "next_id": 14
         }
       }
     },
     {
       "id": 9,
-      "text": "As you venture deeper into the heart of darkness, you come face to face with the source of the outbreak - a twisted amalgamation of flesh and circuitry, the embodiment of humanity's folly. With every fiber of your being, you must fight to survive, for the fate of the world hangs in the balance.",
+      "text": "You exit the room and find yourself in a hallway.",
       "options": {
         "1": {
-          "text": "Engage in a battle to the death, determined to put an end to the nightmare once and for all.",
+          "text": "Go left",
           "next_id": 11
         },
         "2": {
-          "text": "Retreat and seek refuge in the shadows, biding your time until another opportunity presents itself.",
-          "next_id": 12
+          "text": "Go right",
+          "next_id": 10
         }
       }
     },
     {
-    	"id": 10,
-    	"text": "you chicken out, lame",
-    	"options": {}
+      "id": 10,
+      "text": "You turn right, and see another door which you enter. On the other side is a disfigured mutant made entirely out of poorly written code, called the Glitcher. It roars and sends a beam of corrupted code at you.",
+      "options": {
+          "1": {
+          "text": "Dodge to the left",
+          "next_id": 16
+        },
+        "2": {
+          "text": "Dodge to the right",
+          "next_id": 17
+        }
+      }
     },
     {
-    	"id": 11,
-    	"text": "you fight the thingy",
-    	"options": {}
+      "id": 11,
+      "text": "You turn left, and see another door which you enter. On the other side is a small kitten. It senses your presence and with a piercing shriek it transforms into a humanoid creature covered in 0's and 1's . 'I am the Byte Bender!', it screams.",
+      "options": {}
     },
     {
-    	"id": 12,
-    	"text": "you hide, lame",
-    	"options": {}
+      "id": 12,
+      "text": "While feeling for a ledge, you slip and fall 7 storeys down onto concrete. Ouch.",
+      "options": {}
+    },
+    {
+      "id": 13,
+      "text": "You climb on to the ledge. Suddenly, a gust of wind knocks you down and you fall 7 storeys onto concrete. Ouch.",
+      "options": {}
+    },
+    {
+      "id": 14,
+      "text": "You collapse from dehydration.",
+      "options": {}
+    },
+    {
+      "id": 15,
+      "text": "You take your chances with the rusty pipe water and drink it. You now have tetanus and are completely paralyzed.",
+      "options": {}
+    },
+    {
+      "id": 16,
+      "text": "you evade the blast, but as you roll, a stray drop of bug ridden code (c++ written by an intern) hits your right foot. it will begin to spread and you will die when it reaches 51% of your body. you are at 2%. to cure the infection, kill the Glitcher.",
+      "options": {
+        "1": {
+          "text": "Charge straight at the Glitcher",
+          "next_id": 18
+        },
+        "2": {
+          "text": "Run around to the side of the Glitcher",
+          "next_id": 30
+        }
+      }
+    },
+    {
+      "id": 17,
+      "text": "The Glitcher anticipates your move, and before you can react, he forces you to reply 'LGTM! :) ' on a junior dev's bug ridden commit and push it to production without review. Linus Torvalds smites you for this sin.",
+      "options": {}
+    },
+      {
+      "id": 18,
+      "text": "Well that was foolish. The Glitcher has caught you. stun him by figuring out what this javascript snippet will return: \nconsole.log(5 + true); ",
+      "options": {
+        "1": {
+          "text": "NaN (Not a Number)",
+          "next_id": 19
+        },
+        "2": {
+          "text": "6",
+          "next_id": 20
+        }
+      }
+    },
+    {
+      "id": 19,
+      "text": "You try to wriggle free from the Glitchers grasp, but it uses its sharp fangs to SQL inject you with malicious code. You bleed out from your wounds.",
+      "options": {}
+    },
+    {
+      "id": 20,
+      "text": "You manage to stun the glitcher long enough to escape, using the power of javascript's broken type coercion. What now? ",
+      "options": {
+        "1": {
+          "text": "Look for an exit",
+          "next_id": 21
+        },
+        "2": {
+          "text": "Try to debug the Glitcher, restoring him back to his human form.",
+          "next_id": 22
+        }
+      }
+    },
+    {
+      "id": 21,
+      "text": "You spot a door and manage to leave the Glitcher in the dust. Unfortunately, Jens Moenig, creator of Snap! is incredibly mad at you for making your create task in Rust and decides that he will use the supreme power of Alonzo to end your playthrough.",
+      "options": {}
+    },
+    {
+      "id": 22,
+      "text": "You examine the Glitcher, and discover a USB port on the back of his neck. You climb up and plug in your laptop. It's hacking time! What Linux distro will you use? ",
+      "options": {
+        "1": {
+          "text": "Arch Linux",
+          "next_id": 23
+        },
+        "2": {
+          "text": "Kali Linux",
+          "next_id": 24
+        }
+      }
+    },
+    {
+      "id": 23,
+      "text": "You've chosen Arch, the neckbeard distro. Overwhelmed by the complicated install process, you break down mentally and fall to the floor, uncontrollably screaming 'I USE ARCH BY THE WAY!!'. mission failed, we'll get em next time",
+      "options": {}
+    },
+    {
+      "id": 24,
+      "text": "you boot up Kali Linux, and open the terminal. What do you type?",
+      "options": {
+        "1": {
+          "text": ":(){:|:&};:",
+          "next_id": 25
+        },
+        "2": {
+          "text": "if (goingToKillMe) { pleaseDont() };",
+          "next_id": 26
+        }
+      }
+    }, 
+    {
+      "id": 25,
+      "text": "Good thinking with the forkbomb, but you made one crucial mistake: you're running it on your own laptop, not the Glitcher's brain. Your laptop overheats and shuts down and the Glitcher infects you with ransomware. Your family must now pay 400 million dollars in Bitcoin to save you.",
+      "options": {}
+    },
+ {
+      "id": 26,
+      "text": "The glitcher doesn't understand javascript, and its circuitry begins smoking trying to process the abomination. It disappears in a cloud of smoke, and reveals a man once it clears",
+      "options": {
+        "1": {
+          "text": "Try to escape through the other door.",
+          "next_id": 27
+        },
+        "2": {
+          "text": "Go up to the man.",
+          "next_id": 28
+        }
+      }
+    }, 
+    {
+      "id": 27,
+      "text": "Well, well, well, says Jens Moenig, creator of Snap. It looks like you decided to write your AP create task in Rust instead of my glorious Snap. Alonzo, take him away! Alonzo, the mascot of Snap, drags you away to a dungeon where you will be forced to write Snap code for all eternity",
+      "options": {}
+    },
+    {
+      "id": 28,
+      "text": "[Dr. Steiner]: Whoa, you saved me! I thought I'd be trapped in that thing forever. I'm Dr. Steiner by the way, I was a researcher here before... the incident. Here, let me get that c++ off of you, it was written by an intern here, so it's basically poison. Look at you! It's all over both of your legs. 5 more minutes and you would have turned into a Glitcher too. Anyway, lets get out of here, I know a back way",
+      "options": {
+        "1": {
+          "text": "Follow Dr. Steiner.",
+          "next_id": 29
+        },
+        "2": {
+          "text": "Screw him, I can do this myself. I'll just leave through that door over there.",
+          "next_id": 27
+        }
+      }
+    }, 
+    {
+      "id": 29,
+      "text": "You follow Dr. Steiner through a small trapdoor that you didn't notice before. He leads you out of the laboratory. \n [Dr. Steiner]: 'Good luck out there stranger, this is where I leave you. I must try to save the others. Don't come back.' \nYou have escaped the lab!",
+      "options": {}
+    },
+    {
+      "id": 30,
+      "text": "You're now on the left side of the Glitcher, and you ran fast enough that it didn't see you yet. But the infection is now at 20% of your body.",
+      "options": {
+        "1": {
+          "text": "Try to escape through the door on the other side of the room.",
+          "next_id": 27
+        },
+        "2": {
+          "text": "Try to debug the Glitcher, restoring him back to his human form.",
+          "next_id": 22
+        }
+      }
     }
   ]
 }

@@ -25,7 +25,7 @@ struct GameData {
     entries: Vec<Entry>,
 }
 
-// function  load game data and parse with serde
+// function to load game data and parse with serde
 fn load_game_data(filename: &str) -> Result<GameData, Box<dyn std::error::Error>> {
     let contents = fs::read_to_string(filename)?;
     let game_data: GameData = serde_json::from_str(&contents)?;
@@ -33,7 +33,7 @@ fn load_game_data(filename: &str) -> Result<GameData, Box<dyn std::error::Error>
 }
 
 fn main() {
- let startmsg = r#"
+ let start_msg = r#"
          ██████╗███████╗██████╗      ██████╗ ██╗   ██╗███████╗███████╗████████╗
         ██╔════╝██╔════╝██╔══██╗    ██╔═══██╗██║   ██║██╔════╝██╔════╝╚══██╔══╝
         ██║     ███████╗██████╔╝    ██║   ██║██║   ██║█████╗  ███████╗   ██║   
@@ -42,7 +42,7 @@ fn main() {
          ╚═════╝╚══════╝╚═╝          ╚══▀▀═╝  ╚═════╝ ╚══════╝╚══════╝   ╚═╝   
                                                                        
     "#;
-    println!("{}", startmsg);
+    println!("{}", start_msg);
     let filename = "src/game_data.json";
     let game_data = match load_game_data(filename) {
         Ok(data) => data,
@@ -65,7 +65,7 @@ loop {
     };
 
 let wrapped_text = fill(&current_entry.text, 100);
-let delay = Duration::from_millis(30); // 10 characters per second
+let delay = Duration::from_millis(10); 
 slow_print(&wrapped_text, delay);
 
     if current_entry.options.is_empty() {
@@ -102,5 +102,5 @@ slow_print(&wrapped_text, delay);
 }
 
 
-    println!("Game over!");
+    println!("\nGame over!");
 }
