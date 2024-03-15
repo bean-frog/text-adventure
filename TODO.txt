@@ -1,5 +1,11 @@
+
+RUST
 Don't display game over text if the user escaped
 finish byte bender fight
 when you die, add the option to go back 1 choice and retry
-finish story creator
 make it so you can specify a json file to use, and use the original one if no args
+
+REACT
+button to download json 
+user can delete cards
+specify that its an ending, in which case no cards
