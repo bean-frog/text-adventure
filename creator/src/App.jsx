@@ -83,7 +83,6 @@ const App = () => {
     <div className="flex">
       <div className="w-1/2 p-4">
         <form onSubmit={handleSubmit}>
-         
           <input
             type="text"
             id="text"
@@ -104,7 +103,6 @@ const App = () => {
         </button>
         {showJson ? (
           <>
-          
 <pre className="overflow-y-auto h-screen max-h-full border border-gray-300 rounded px-4 py-2 mt-4">
   {JSON.stringify({ entries: cards }, null, 2)}
 </pre>
