@@ -10,6 +10,7 @@ can you survive long enough to escape the lab?
 
 
 ## dev info
+- rust program that runs the game is under /cyoa. React webapp to create games with a GUI is under /creator
 - the program is designed to work with any json file as long as it follows the same formatting.
 - the json is (theoretically) infinitely scalable, with as many stages as you want.
 - JSON format:
