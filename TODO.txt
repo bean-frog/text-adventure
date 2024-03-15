@@ -9,3 +9,4 @@ REACT
 button to download json 
 user can delete cards
 specify that its an ending, in which case no cards
+jump to referenced card in card view
