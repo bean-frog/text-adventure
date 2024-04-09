@@ -30,7 +30,7 @@
    ]
 }
 ```
-	+ The JSON data is infinitely scalable, with as many entries as you want.
++ The JSON data is infinitely scalable, with as many entries as you want.
 
 ## Reader information
 + code is under ./cyoa
