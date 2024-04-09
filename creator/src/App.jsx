@@ -13,6 +13,7 @@ const initialData = {
       next_id: 3,
     },
   },
+  win: false
 };
 
 const App = () => {
@@ -157,15 +158,41 @@ const App = () => {
                   className="font-semibold text-xl bg-stone-600 border-2 border-white text-white rounded px-2 py-1 w-full mb-2"
                   placeholder="Enter card text..."
                 />
-                <label>
-                  Ending:
-                  <input
-                    type="checkbox"
-                    checked={Object.keys(card.options).length === 0}
-                    onChange={(e) => handleEndingChange(e, card.id)}
-                    className="ml-2 bg-stone-600 border-2 border-white text-white"
-                  />
-                </label>
+                <div className="flex flex-col">
+               <label>
+  Ending:
+  <input
+    type="checkbox"
+    checked={Object.keys(card.options).length === 0}
+    onChange={(e) => handleEndingChange(e, card.id)}
+    className="ml-2 bg-stone-600 border-2 border-white text-white"
+  />
+</label>
+{Object.keys(card.options).length === 0 && (
+  <label>
+    Is Win:
+    <input
+      type="checkbox"
+      checked={card.win}
+      onChange={(e) => {
+        const isChecked = e.target.checked;
+        setCards((prevCards) =>
+          prevCards.map((c) => {
+            if (c.id === card.id) {
+              return {
+                ...c,
+                win: isChecked,
+              };
+            }
+            return c;
+          })
+        );
+      }}
+      className="ml-2 bg-stone-600 border-2 border-white text-white"
+    />
+  </label>
+  )}
+</div>
                 <ul>
                   {Object.keys(card.options).map((optionId) => (
                     <li key={optionId} className="mb-2 w-full transition-all duration-300">

@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-03-26T20:13:24.720Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="qKd70MQjyhJ8S7bfMb8x" version="24.1.0" type="device" pages="3">
+<mxfile host="app.diagrams.net" modified="2024-04-09T20:31:16.584Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="kcBail-7NbfeCU8Ah_nD" version="24.2.0" type="device" pages="3">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="main">
     <mxGraphModel dx="1434" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -466,7 +466,7 @@
         <mxCell id="mvoUAwvOFL0haTO6Dt8D-2" value="dodge left" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCCCCC;" parent="1" vertex="1">
           <mxGeometry x="10" y="220" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="qh84-B9v5P9l0jqtQ9WS-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mvoUAwvOFL0haTO6Dt8D-3" target="qh84-B9v5P9l0jqtQ9WS-1">
+        <mxCell id="qh84-B9v5P9l0jqtQ9WS-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="mvoUAwvOFL0haTO6Dt8D-3" target="qh84-B9v5P9l0jqtQ9WS-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="mvoUAwvOFL0haTO6Dt8D-3" value="dodge right" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCCCCC;" parent="1" vertex="1">
@@ -520,8 +520,8 @@
         <mxCell id="MiI4YT7C-nWib5My42M--14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="MiI4YT7C-nWib5My42M--9" target="MiI4YT7C-nWib5My42M--13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="MiI4YT7C-nWib5My42M--9" value="hell yeah" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCCCCC;" parent="1" vertex="1">
-          <mxGeometry x="175" y="700" width="80" height="30" as="geometry" />
+        <mxCell id="MiI4YT7C-nWib5My42M--9" value="hell yeah that sounds awesome" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCCCCC;" parent="1" vertex="1">
+          <mxGeometry x="175" y="700" width="85" height="50" as="geometry" />
         </mxCell>
         <mxCell id="MiI4YT7C-nWib5My42M--22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="MiI4YT7C-nWib5My42M--13" target="MiI4YT7C-nWib5My42M--16" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -541,23 +541,47 @@
         <mxCell id="MiI4YT7C-nWib5My42M--20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.429;entryY=0.967;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="MiI4YT7C-nWib5My42M--13" target="MiI4YT7C-nWib5My42M--17" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="MiI4YT7C-nWib5My42M--23" value="you fly out of the building and into the sky. You&#39;ve escaped the lab!&lt;br&gt;(put a ton of line breaks here to be dramatic)&lt;div&gt;just kidding. the USAF would like their Pave Hawk back, and send 2 A-10 Thunderbolt II&#39;s, 4 F-35 Lightning II&#39;s, and an F-22 Falcon to intercept you. There is no possible way for you to survive lol&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FF3D1F;" parent="1" vertex="1">
-          <mxGeometry x="220" y="930" width="255" height="120" as="geometry" />
+        <mxCell id="0a2tneScN-wYc4mvkGQb-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="MiI4YT7C-nWib5My42M--23" target="0a2tneScN-wYc4mvkGQb-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0a2tneScN-wYc4mvkGQb-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="MiI4YT7C-nWib5My42M--23" target="0a2tneScN-wYc4mvkGQb-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MiI4YT7C-nWib5My42M--23" value="you fly out of the building and into the sky. You&#39;ve escaped the lab!&lt;br&gt;(put a ton of line breaks here to be dramatic)&lt;div&gt;just kidding. the usaf would like backthe helicopter that you stole, and the radar systems on board show that 4 F-35 Lightning jets are closing in.&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="267" y="950" width="255" height="120" as="geometry" />
         </mxCell>
         <mxCell id="MiI4YT7C-nWib5My42M--24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.478;entryY=0.025;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="MiI4YT7C-nWib5My42M--16" target="MiI4YT7C-nWib5My42M--23" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="qh84-B9v5P9l0jqtQ9WS-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qh84-B9v5P9l0jqtQ9WS-1" target="qh84-B9v5P9l0jqtQ9WS-3">
+        <mxCell id="qh84-B9v5P9l0jqtQ9WS-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="qh84-B9v5P9l0jqtQ9WS-1" target="qh84-B9v5P9l0jqtQ9WS-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="qh84-B9v5P9l0jqtQ9WS-1" value="you slide to the right, and the byte bender predicts your movement and intercepts you. swallows you whole. inside it, you see a door and a pair of scissors&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="qh84-B9v5P9l0jqtQ9WS-1" value="you slide to the right, and the byte bender predicts your movement and intercepts you. swallows you whole. inside it, you see a door and a pair of scissors&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="230" y="280" width="225" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="qh84-B9v5P9l0jqtQ9WS-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qh84-B9v5P9l0jqtQ9WS-3" target="MiI4YT7C-nWib5My42M--1">
+        <mxCell id="qh84-B9v5P9l0jqtQ9WS-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="qh84-B9v5P9l0jqtQ9WS-3" target="MiI4YT7C-nWib5My42M--1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="qh84-B9v5P9l0jqtQ9WS-3" value="exit through the door" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCCCCC;" vertex="1" parent="1">
+        <mxCell id="qh84-B9v5P9l0jqtQ9WS-3" value="exit through the door" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCCCCC;" parent="1" vertex="1">
           <mxGeometry x="310" y="400" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0a2tneScN-wYc4mvkGQb-1" value="i dont want to mess with the air force, surrender" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCCCCC;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="226" y="1100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="0a2tneScN-wYc4mvkGQb-3" value="you surrender, and have technically escaped the lab but are sent to federal prison" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FF3D1F;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1200" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="0a2tneScN-wYc4mvkGQb-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.463;entryY=0.043;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="0a2tneScN-wYc4mvkGQb-1" target="0a2tneScN-wYc4mvkGQb-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0a2tneScN-wYc4mvkGQb-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0a2tneScN-wYc4mvkGQb-5" target="0a2tneScN-wYc4mvkGQb-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0a2tneScN-wYc4mvkGQb-5" value="fight back, by releasing flare countermeasures and engaging the jets in combat with the onboard .50 caliber machine guns" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#CCCCCC;" vertex="1" parent="1">
+          <mxGeometry x="418.25" y="1110" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="0a2tneScN-wYc4mvkGQb-7" value="somehow, you are able to singlehandedly defeat 4 of the us military&#39;s 5th gen fighters using only a helicopter. you land outside the laboratory. you have escaped" style="whiteSpace=wrap;html=1;fillColor=#97D077;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="438.25" y="1310" width="168.75" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

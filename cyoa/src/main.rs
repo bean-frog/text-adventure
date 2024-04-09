@@ -90,7 +90,31 @@ println!("{}", game_data.title);
         let delay = Duration::from_millis(10);
         slow_print(&wrapped_text, delay);
 
-        if current_entry.options.is_empty() {
+
+        if current_entry.options.is_empty() { //no options detected, therefore entry is an ending
+            if current_entry.win == false {
+                let gameover_msg = r#"
+                                                                       ,---. 
+ ,----.                                 ,-----.                        |   | 
+'  .-./    ,--,--.,--,--,--. ,---.     '  .-.  ',--.  ,--.,---. ,--.--.|  .' 
+|  | .---.' ,-.  ||        || .-. :    |  | |  | \  `'  /| .-. :|  .--'|  |  
+'  '--'  |\ '-'  ||  |  |  |\   --.    '  '-'  '  \    / \   --.|  |   `--'  
+ `------'  `--`--'`--`--`--' `----'     `-----'    `--'   `----'`--'   .--.  
+                                                                       '--'  
+                "#
+                println!("\n{}", gameover_msg)
+            } else {
+                   let win_msg = r#"
+                                                      ,---. 
+,--.   ,--.                 ,--.   ,--.               |   | 
+ \  `.'  /,---. ,--.,--.    |  |   |  | ,---. ,--,--, |  .' 
+  '.    /| .-. ||  ||  |    |  |.'.|  || .-. ||      \|  |  
+    |  | ' '-' ''  ''  '    |   ,'.   |' '-' '|  ||  |`--'  
+    `--'  `---'  `----'     '--'   '--' `---' `--''--'.--.  
+                                                      '--'                                                          
+                "#
+                println!("\n{}", win_msg)
+            }
             break;
         }
 

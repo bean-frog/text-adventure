@@ -2,7 +2,5 @@
 RUST
 finish byte bender fight
 when you die, add the option to go back 1 choice and retry
-check if card is win/lose and print accordingly
 
 REACT
-implement win/lose choice when card is an ending
