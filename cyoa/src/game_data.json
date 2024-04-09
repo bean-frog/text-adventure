@@ -1,4 +1,5 @@
 {
+  "title": "CSP Quest\n",
   "entries": [
     {
       "id": 1,
@@ -12,7 +13,8 @@
           "text": "Leave the room immediately",
           "next_id": 9
         }
-      }
+      },
+      "win": false
     },
     {
       "id": 2,
@@ -26,7 +28,8 @@
           "text": "Leave the room",
           "next_id": 9
         }
-      }
+      },
+      "win": false
     },
     {
       "id": 3,
@@ -40,7 +43,8 @@
           "text": "Don't climb out the window, use the door instead.",
           "next_id": 9
         }
-      }
+      },
+      "win": false
     },
     {
       "id": 4,
@@ -54,7 +58,8 @@
           "text": "Feel for a ledge to the left.",
           "next_id": 5
         }
-      }
+      },
+      "win": false
     },
     {
       "id": 5,
@@ -68,7 +73,8 @@
           "text": "Don't risk falling and go back inside.",
           "next_id": 6
         }
-      }
+      },
+      "win": false
     },
     {
       "id": 6,
@@ -82,7 +88,8 @@
           "text": "Go out the door.",
           "next_id": 9
         }
-      }
+      },
+      "win": false
     },
     {
       "id": 7,
@@ -96,7 +103,8 @@
           "text": "Look for some water",
           "next_id": 8
         }
-      }
+      },
+      "win": false
     },
     {
       "id": 8,
@@ -110,7 +118,8 @@
           "text": "No",
           "next_id": 14
         }
-      }
+      },
+      "win": false
     },
     {
       "id": 9,
@@ -124,7 +133,8 @@
           "text": "Go right",
           "next_id": 10
         }
-      }
+      },
+      "win": false
     },
     {
       "id": 10,
@@ -138,32 +148,38 @@
           "text": "Dodge to the right",
           "next_id": 17
         }
-      }
+      },
+      "win": false
     },
     {
       "id": 11,
       "text": "You turn left, and see another door which you enter. On the other side is a small kitten. It senses your presence and with a piercing shriek it transforms into a humanoid creature covered in 0's and 1's . 'I am the Byte Bender!', it screams.",
-      "options": {}
+      "options": {},
+      "win": false
     },
     {
       "id": 12,
       "text": "While feeling for a ledge, you slip and fall 7 storeys down onto concrete. Ouch.",
-      "options": {}
+      "options": {},
+      "win": false
     },
     {
       "id": 13,
       "text": "You climb on to the ledge. Suddenly, a gust of wind knocks you down and you fall 7 storeys onto concrete. Ouch.",
-      "options": {}
+      "options": {},
+      "win": false
     },
     {
       "id": 14,
       "text": "You collapse from dehydration.",
-      "options": {}
+      "options": {},
+      "win": false
     },
     {
       "id": 15,
       "text": "You take your chances with the rusty pipe water and drink it. You now have tetanus and are completely paralyzed.",
-      "options": {}
+      "options": {},
+      "win": false
     },
     {
       "id": 16,
@@ -177,12 +193,14 @@
           "text": "Run around to the side of the Glitcher",
           "next_id": 30
         }
-      }
+      },
+      "win": false
     },
     {
       "id": 17,
       "text": "The Glitcher anticipates your move, and before you can react, he forces you to reply 'LGTM! :) ' on a junior dev's bug ridden commit and push it to production without review. Linus Torvalds smites you for this sin.",
-      "options": {}
+      "options": {},
+      "win": false
     },
       {
       "id": 18,
@@ -196,12 +214,14 @@
           "text": "6",
           "next_id": 20
         }
-      }
+      },
+      "win": false
     },
     {
       "id": 19,
       "text": "You try to wriggle free from the Glitchers grasp, but it uses its sharp fangs to SQL inject you with malicious code. You bleed out from your wounds.",
-      "options": {}
+      "options": {},
+      "win": false
     },
     {
       "id": 20,
@@ -215,12 +235,14 @@
           "text": "Try to debug the Glitcher, restoring him back to his human form.",
           "next_id": 22
         }
-      }
+      },
+      "win": false
     },
     {
       "id": 21,
       "text": "You spot a door and manage to leave the Glitcher in the dust. Unfortunately, Jens Moenig, creator of Snap! is incredibly mad at you for making your create task in Rust and decides that he will use the supreme power of Alonzo to end your playthrough.",
-      "options": {}
+      "options": {},
+      "win": false
     },
     {
       "id": 22,
@@ -234,12 +256,14 @@
           "text": "Kali Linux",
           "next_id": 24
         }
-      }
+      },
+      "win": false
     },
     {
       "id": 23,
       "text": "You've chosen Arch, the neckbeard distro. Overwhelmed by the complicated install process, you break down mentally and fall to the floor, uncontrollably screaming 'I USE ARCH BY THE WAY!!'. mission failed, we'll get em next time",
-      "options": {}
+      "options": {},
+      "win": false
     },
     {
       "id": 24,
@@ -253,12 +277,14 @@
           "text": "if (goingToKillMe) { pleaseDont() };",
           "next_id": 26
         }
-      }
+      },
+      "win": false
     }, 
     {
       "id": 25,
       "text": "Good thinking with the forkbomb, but you made one crucial mistake: you're running it on your own laptop, not the Glitcher's brain. Your laptop overheats and shuts down and the Glitcher infects you with ransomware. Your family must now pay 400 million dollars in Bitcoin to save you.",
-      "options": {}
+      "options": {},
+      "win": false
     },
  {
       "id": 26,
@@ -272,12 +298,14 @@
           "text": "Go up to the man.",
           "next_id": 28
         }
-      }
+      },
+      "win": false
     }, 
     {
       "id": 27,
       "text": "Well, well, well, says Jens Moenig, creator of Snap. It looks like you decided to write your AP create task in Rust instead of my glorious Snap. Alonzo, take him away! Alonzo, the mascot of Snap, drags you away to a dungeon where you will be forced to write Snap code for all eternity",
-      "options": {}
+      "options": {},
+      "win": false
     },
     {
       "id": 28,
@@ -291,12 +319,14 @@
           "text": "Screw him, I can do this myself. I'll just leave through that door over there.",
           "next_id": 27
         }
-      }
+      },
+      "win": false
     }, 
     {
       "id": 29,
-      "text": "You follow Dr. Steiner through a small trapdoor that you didn't notice before. He leads you out of the laboratory. \n [Dr. Steiner]: 'Good luck out there stranger, this is where I leave you. I must try to save the others. Don't come back.' \nYou have escaped the lab!",
-      "options": {}
+      "text": "You follow Dr. Steiner through a small trapdoor that you didn't notice before. He leads you out of the laboratory. \n [Dr. Steiner]: 'Good luck out there stranger, this is where I leave you. I must try to save the others. Don't come back.' \nYou won!",
+      "options": {},
+      "win": true
     },
     {
       "id": 30,
@@ -310,7 +340,8 @@
           "text": "Try to debug the Glitcher, restoring him back to his human form.",
           "next_id": 22
         }
-      }
+      },
+      "win": false
     }
   ]
 }

@@ -1,12 +1,8 @@
 
 RUST
-Don't display game over text if the user escaped
 finish byte bender fight
 when you die, add the option to go back 1 choice and retry
-make it so you can specify a json file to use, and use the original one if no args
+check if card is win/lose and print accordingly
 
 REACT
-button to download json 
-user can delete cards
-specify that its an ending, in which case no cards
-jump to referenced card in card view
+implement win/lose choice when card is an ending
