@@ -1,12 +1,41 @@
+use serde::Deserialize;
+use slowprint::slow_print;
 use std::collections::HashMap;
 use std::env;
 use std::fs;
-use serde::Deserialize;
 use std::io::{self, Write};
-use textwrap::fill;
-use slowprint::slow_print;
 use std::time::Duration;
+use textwrap::fill;
 
+// defining all multiline strings here (instead of before theyre called) bc why not
+// maybe have the win/gameover messages be customizable by the creator
+static START_MSG: &str = r#"
+ ██████╗     ██╗   ██╗     ██████╗      █████╗ 
+██╔════╝     ╚██╗ ██╔╝    ██╔═══██╗    ██╔══██╗
+██║           ╚████╔╝     ██║   ██║    ███████║
+██║            ╚██╔╝      ██║   ██║    ██╔══██║
+╚██████╗HOOSE   ██║OUR    ╚██████╔╝WN  ██║  ██║DVENTURE
+ ╚═════╝        ╚═╝        ╚═════╝     ╚═╝  ╚═╝
+                                  
+"#;
+static GAMEOVER_MSG: &str = r#"
+                                                                       ,---. 
+ ,----.                                 ,-----.                        |   | 
+'  .-./    ,--,--.,--,--,--. ,---.     '  .-.  ',--.  ,--.,---. ,--.--.|  .' 
+|  | .---.' ,-.  ||        || .-. :    |  | |  | \  `'  /| .-. :|  .--'|  |  
+'  '--'  |\ '-'  ||  |  |  |\   --.    '  '-'  '  \    / \   --.|  |   `--'  
+ `------'  `--`--'`--`--`--' `----'     `-----'    `--'   `----'`--'   .--.  
+                                                                       '--'  
+"#;
+static WIN_MSG: &str = r#"
+                                                      ,---. 
+,--.   ,--.                 ,--.   ,--.               |   | 
+ \  `.'  /,---. ,--.,--.    |  |   |  | ,---. ,--,--, |  .' 
+  '.    /| .-. ||  ||  |    |  |.'.|  || .-. ||      \|  |  
+    |  | ' '-' ''  ''  '    |   ,'.   |' '-' '|  ||  |`--'  
+    `--'  `---'  `----'     '--'   '--' `---' `--''--'.--.  
+                                                      '--'                                                          
+"#;
 // structs for game data types
 #[derive(Debug, Deserialize)]
 struct Option {
@@ -19,7 +48,7 @@ struct Entry {
     id: u32,
     text: String,
     options: HashMap<u32, Option>,
-    win: bool
+    win: bool,
 }
 
 #[derive(Debug, Deserialize)]
@@ -35,19 +64,11 @@ fn load_game_data_from_str(json_str: &str) -> Result<GameData, Box<dyn std::erro
 }
 
 fn main() {
- 
-let start_msg = r#"
- ██████╗     ██╗   ██╗     ██████╗      █████╗ 
-██╔════╝     ╚██╗ ██╔╝    ██╔═══██╗    ██╔══██╗
-██║           ╚████╔╝     ██║   ██║    ███████║
-██║            ╚██╔╝      ██║   ██║    ██╔══██║
-╚██████╗HOOSE   ██║OUR    ╚██████╔╝WN  ██║  ██║DVENTURE
- ╚═════╝        ╚═╝        ╚═════╝     ╚═╝  ╚═╝
-                                  
-"#;
-    println!("{}", start_msg);
-   let game_data_json_str = include_str!("game_data.json");
+    println!("{}", START_MSG);
 
+    let game_data_json_str = include_str!("game_data.json"); // initial value for JSON. overwritten if provided path exists/is valid.
+
+    //get first environment arg and determine if its a valid path
     let game_data = match env::args().nth(1) {
         Some(file_path) => {
             if let Ok(json_content) = fs::read_to_string(&file_path) {
@@ -59,24 +80,24 @@ let start_msg = r#"
                     }
                 }
             } else {
-                eprintln!("Error reading game data from file: {}. Make sure it exists.", &file_path);
+                eprintln!(
+                    "Error reading game data from file: {}. Make sure it exists.",
+                    &file_path
+                );
                 return;
             }
         }
-        None => {
-            match load_game_data_from_str(game_data_json_str) {
-                Ok(data) => data,
-                Err(e) => {
-                    eprintln!("Error loading game data: {}", e);
-                    return;
-                }
+        None => match load_game_data_from_str(game_data_json_str) {
+            Ok(data) => data,
+            Err(e) => {
+                eprintln!("Error loading game data: {}", e);
+                return;
             }
-        }
+        },
     };
-println!("{}", game_data.title);
+    println!("{}", game_data.title);
     let mut current_entry_id = 1;
-
-  // main loop
+    // main loop
     loop {
         let current_entry = match game_data.entries.iter().find(|e| e.id == current_entry_id) {
             Some(entry) => entry,
@@ -85,40 +106,21 @@ println!("{}", game_data.title);
                 break;
             }
         };
-
         let wrapped_text = fill(&current_entry.text, 100);
-        let delay = Duration::from_millis(10);
+        let delay = Duration::from_millis(10); // slowprint delay in ms.
         slow_print(&wrapped_text, delay);
 
-
-        if current_entry.options.is_empty() { //no options detected, therefore entry is an ending
+        if current_entry.options.is_empty() {
+            // no options detected, therefore entry is an ending
             if current_entry.win == false {
-                let gameover_msg = r#"
-                                                                       ,---. 
- ,----.                                 ,-----.                        |   | 
-'  .-./    ,--,--.,--,--,--. ,---.     '  .-.  ',--.  ,--.,---. ,--.--.|  .' 
-|  | .---.' ,-.  ||        || .-. :    |  | |  | \  `'  /| .-. :|  .--'|  |  
-'  '--'  |\ '-'  ||  |  |  |\   --.    '  '-'  '  \    / \   --.|  |   `--'  
- `------'  `--`--'`--`--`--' `----'     `-----'    `--'   `----'`--'   .--.  
-                                                                       '--'  
-                "#
-                println!("\n{}", gameover_msg)
+                println!("\n{}", GAMEOVER_MSG);
             } else {
-                   let win_msg = r#"
-                                                      ,---. 
-,--.   ,--.                 ,--.   ,--.               |   | 
- \  `.'  /,---. ,--.,--.    |  |   |  | ,---. ,--,--, |  .' 
-  '.    /| .-. ||  ||  |    |  |.'.|  || .-. ||      \|  |  
-    |  | ' '-' ''  ''  '    |   ,'.   |' '-' '|  ||  |`--'  
-    `--'  `---'  `----'     '--'   '--' `---' `--''--'.--.  
-                                                      '--'                                                          
-                "#
-                println!("\n{}", win_msg)
+                println!("\n{}", WIN_MSG);
             }
             break;
         }
 
-        println!("\nChoose an option:");
+        println!("\n\nChoose an option:");
 
         for (i, option) in current_entry.options.iter() {
             println!("{}. {}", i, option.text);
@@ -128,7 +130,9 @@ println!("{}", game_data.title);
         io::stdout().flush().unwrap();
 
         let mut input = String::new();
-        io::stdin().read_line(&mut input).expect("Failed to read line");
+        io::stdin()
+            .read_line(&mut input)
+            .expect("Failed to read line");
         let choice: u32 = match input.trim().parse() {
             Ok(num) => num,
             Err(_) => {
@@ -146,5 +150,4 @@ println!("{}", game_data.title);
             }
         }
     }
-
 }
