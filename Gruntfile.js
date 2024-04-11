@@ -4,23 +4,15 @@ module.exports = function (grunt) {
     cssmin: {
       target: {
         files: {
-          'creator/src/index.css': ['creator/src/index.css']
-        }
-      }
-    },
-    watch: {
-      styles: {
-        files: ['creator/src/**/*.css'],
-        tasks: ['cssmin'],
-        options: {
-          spawn: false,
+          'creator/src/index.css': ['creator/src/index.css'] 
         }
       }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('minify', ['cssmin']);
+
+  grunt.registerTask('default', ['minify']); 
 };

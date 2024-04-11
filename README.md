@@ -1,11 +1,17 @@
 # text-adventure
-#### A choose your own adventure reader written in Rust, made for the 2024 APCSP Create Task
-
+#### A choose your own adventure reader written in Rust
+- This project was made for the 2024 APCSP Create Task, though it is released for public use :D
+- I used Rust because its fast and I thought this would be a good opportunity to learn it (first actual app in Rust for me!)
 ## General Information
 - The project contains 2 main parts: Reader (`./cyoa`), and Creator (`./creator`).
 - The reader is a CLI program written in Rust, designed to display a choose-your-own-adventure style game from a JSON file.
 - The creator is a web app built with React and Tailwind that is designed to provide a graphical way to create stories compatible with the reader.
 - More advanced users can create stories manually with JSON, as long as it matches the specified format.
+- Anyone is also free to make their own compatible creator, as long as the data it outputs matches the format as well.
+  - Please note that the `win` key must exist on every entry, regardless of if it's an ending or not. 
+  - Also, ensure that the options key also exists in every entry. For ending cards, simply have it be an empty object.
+  - For any formatting clarifications, check the JSON section of the creator interface, as it is (probably) always correct.
+
 
 ```
 {
@@ -24,7 +30,8 @@
           "text": "The user can also choose this to go to entry 3",
           "next_id": 3
         }
-      }
+      },
+      "win": false
     }
     ... add as many entries as you want
    ]
@@ -33,7 +40,7 @@
 + The JSON data is infinitely scalable, with as many entries as you want.
 
 ## Reader information
-+ code is under ./cyoa
++ code is under `./cyoa`
 + built executables for Arch Linux and Windows will be available in the Releases tab of this repo.
 + if these fail to run for any reason, building locally is your best option. Here's how:
 	+ Install Cargo with your system's package manager (Pacman, Yay, Apt, Winget, Chocolatey, etc)
