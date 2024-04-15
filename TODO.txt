@@ -1,6 +1,5 @@
 
 RUST
 finish byte bender fight
-when you die, add the option to go back 1 choice and retry 
-function with loop, input that isnt main. maybe for the above, have array that keeps track of all visited entried and loops thru them (get_prev_entry(currentId) function type shi)
+function with loop, input that isnt main.
 REACT

@@ -8,7 +8,8 @@ use std::time::Duration;
 use textwrap::fill;
 
 // defining all multiline strings here (instead of before theyre called) bc why not
-// maybe have the win/gameover messages be customizable by the creator
+// these big letters look really cool fr
+// maybe have the win/gameover messages be customizable by the creator??
 static START_MSG: &str = r#"
  ██████╗     ██╗   ██╗     ██████╗      █████╗ 
 ██╔════╝     ╚██╗ ██╔╝    ██╔═══██╗    ██╔══██╗
@@ -57,7 +58,7 @@ struct GameData {
     entries: Vec<Entry>,
 }
 
-// Function to load game data from embedded JSON string (we have to use embedded string so that cargo includes the json file when building)
+// Function to load game data from embedded JSON string (for whatever reason cargo only includes it in the build if we do it this way)
 fn load_game_data_from_str(json_str: &str) -> Result<GameData, Box<dyn std::error::Error>> {
     let game_data: GameData = serde_json::from_str(json_str)?;
     Ok(game_data)
@@ -87,6 +88,7 @@ fn main() {
                 return;
             }
         }
+        //user is stupid and/or can't read and supplied a bad file. Use default instead, because we have to do everything for people these days smh
         None => match load_game_data_from_str(game_data_json_str) {
             Ok(data) => data,
             Err(e) => {
@@ -97,6 +99,7 @@ fn main() {
     };
     println!("{}", game_data.title);
     let mut current_entry_id = 1;
+
     // main loop
     loop {
         let current_entry = match game_data.entries.iter().find(|e| e.id == current_entry_id) {
@@ -106,47 +109,75 @@ fn main() {
                 break;
             }
         };
+
         let wrapped_text = fill(&current_entry.text, 100);
-        let delay = Duration::from_millis(10); // slowprint delay in ms.
+        let delay = Duration::from_millis(10);
         slow_print(&wrapped_text, delay);
 
         if current_entry.options.is_empty() {
-            // no options detected, therefore entry is an ending
-            if current_entry.win == false {
-                println!("\n{}", GAMEOVER_MSG);
+            if current_entry.win == true {
+                println!("{}", WIN_MSG);
+                break;
+            } else if current_entry.win == false {
+                println!("{}", GAMEOVER_MSG);
+                println!("\nWould you like to go back one choice and retry? (y/n)");
+                let mut retry_choice = String::new();
+                io::stdin()
+                    .read_line(&mut retry_choice)
+                    .expect("Failed to read line");
+                if retry_choice.trim().to_lowercase() == "y" {
+                    if let Some(prev_entry_id) = game_data
+                        .entries
+                        .iter()
+                        .find(|&entry| {
+                            entry
+                                .options
+                                .values()
+                                .any(|opt| opt.next_id == current_entry_id)
+                        })
+                        .map(|entry| entry.id)
+                    {
+                        current_entry_id = prev_entry_id;
+                        continue;
+                    }
+                } else {
+                    break;
+                }
             } else {
-                println!("\n{}", WIN_MSG);
+                eprintln!("Hmm, looks like the JSON was configured incorrectly. Win key for entry {} is either nonexistent or not a boolean (true/false)", current_entry_id)
             }
-            break;
         }
+        if current_entry.win == true {
+            return;
+        } else {
+            println!("\nChoose an option:");
 
-        println!("\n\nChoose an option:");
-
-        for (i, option) in current_entry.options.iter() {
-            println!("{}. {}", i, option.text);
-        }
-
-        print!("> ");
-        io::stdout().flush().unwrap();
-
-        let mut input = String::new();
-        io::stdin()
-            .read_line(&mut input)
-            .expect("Failed to read line");
-        let choice: u32 = match input.trim().parse() {
-            Ok(num) => num,
-            Err(_) => {
-                println!("Invalid input. Please enter a number.");
-                continue;
+            for (i, option) in current_entry.options.iter() {
+                println!("{}. {}", i, option.text);
             }
-        };
 
-        match current_entry.options.get(&choice) {
-            Some(option) => {
-                current_entry_id = option.next_id;
-            }
-            None => {
-                println!("Invalid option. Please choose a valid option.");
+            print!("> ");
+            io::stdout().flush().unwrap();
+
+            let mut input = String::new();
+            io::stdin()
+                .read_line(&mut input)
+                .expect("Failed to read line");
+            let choice: u32 = match input.trim().parse() {
+                Ok(num) => num,
+                Err(_) => {
+                    println!("Invalid input. Please enter a number.");
+                    continue;
+                }
+            };
+
+            match current_entry.options.get(&choice) {
+                Some(option) => {
+                    current_entry_id = option.next_id;
+                }
+                None => {
+                    println!("Invalid option. Please choose a valid option.");
+                }
             }
         }
     }
