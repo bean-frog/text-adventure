@@ -153,8 +153,17 @@
     },
     {
       "id": 11,
-      "text": "You turn left, and see another door which you enter. On the other side is a small kitten. It senses your presence and with a piercing shriek it transforms into a humanoid creature covered in 0's and 1's . 'I am the Byte Bender!', it screams.",
-      "options": {},
+      "text": "You turn left, and see another door which you enter. On the other side is a small kitten.",
+      "options": {
+        "1": {
+          "text": "Pet the kitten",
+          "next_id": 31
+        },
+        "2": {
+          "text": "Keep your distance",
+          "next_id": 42
+        }
+      },
       "win": false
     },
     {
@@ -342,6 +351,177 @@
         }
       },
       "win": false
+    },
+    {
+      "id": 31,
+      "text": "As your hand reaches for the kitten, it transforms into an eldritch horror beyond human comprehension and lunges for you. ",
+      "options": {
+        "1": {
+          "text": "Dodge left",
+          "next_id": 32
+        },
+        "2": {
+          "text": "Dodge right",
+          "next_id": 39
+        }
+      },
+      "win": false
+    },
+    {
+      "id": 32,
+      "text": "The creature lunges right, trying to predict where you are going to go. As you slide left, it turns to look at you and ends up smashing into a wall, becoming stunned momentarily.",
+      "options": {
+        "1": {
+          "text": "Look for a weapon to fight it with",
+          "next_id": 33
+        },
+        "2": {
+          "text": "Try to escape through the other door while it's stunned",
+          "next_id": 27
+        }
+      },
+      "win": false
+    },
+     {
+      "id": 33,
+      "text": "you look around the room and spot a Sikorsky HH-60G Pave Hawk helicopter in the corner. Get in?",
+      "options": {
+        "1": {
+          "text": "Hell yeah that sounds awesome",
+          "next_id": 35
+        },
+        "2": {
+          "text": "That probably belongs to someone, and I also don't know how to fly it.",
+          "next_id": 34
+        }
+      },
+      "win": false
+    },
+    {
+      "id": 34,
+      "text": "[Creature]: Dude, thats's so lame. That's literally a military helicopter. Why wouldn't you get in. \n You die of sheer embarassment.",
+      "options": {},
+      "win": false
+    },
+    {
+      "id": 35,
+      "text": "You get in to the helicopter and start the engines. as the blades start spinning, the Creature regains connsciousness and lunges for you, only to get sliced up by the blades and turned into a fine purple mist. The roof slides off of the room.",
+      "options": {
+        "1": {
+          "text": "Get out of the helicopter and use the door, that's probably easier",
+          "next_id": 27
+        },
+        "2": {
+          "text": "Fly out of the room",
+          "next_id": 36
+        }
+      },
+      "win": false
+    },
+    {
+      "id": 36,
+      "text": "You fly out of the building and into the sky. You've escaped the lab! \nJust kidding. the USAF would like back their helicopter that you stole, and the radar systems on board show that a squadron of F-35 Lightning II jets are closing in.",
+      "options": {
+        "1": {
+          "text": "I dont want to mess with the Air Force, I surrender!",
+          "next_id": 37
+        },
+        "2": {
+          "text": "Fight back, by releasing flares to counter any heatseeking missiles and engaging the jets in combat with the onboard .50 caliber machine guns",
+          "next_id": 38
+        }
+      },
+      "win": false
+    },
+     {
+      "id": 37,
+      "text": "You surrender, and have technically escaped the lab but are sent to federal prison",
+      "options": {},
+      "win": false
+    },
+     {
+      "id": 38,
+      "text": "Somehow, you are able to singlehandedly defeat a squadron of 5th generation fighters using only a helicopter. You land outside the laboratory. You have escaped",
+      "options": {},
+      "win": true
+    },
+    {
+      "id": 39,
+      "text": "You slide to the right, and the Creature predicts your movement and intercepts you, then swallows you whole. Inside it, you see a door and a pair of scissors.",
+      "options": {
+        "1": {
+          "text": "Exit through the door",
+          "next_id": 27
+        },
+        "2": {
+          "text": "Cut your way out with the scissors",
+          "next_id": 40
+        }
+      },
+      "win": false
+    },
+    {
+      "id": 40,
+      "text": "It's pretty disgusting, but you manage to cut your way out, killing the Creature in the process",
+      "options": {
+        "1": {
+          "text": "Exit through the door in the room",
+          "next_id": 27
+        },
+        "2": {
+          "text": "Cut a hole in the 6 inch steel wall using the scssors",
+          "next_id": 41
+        }
+      },
+      "win": false
+    },
+    {
+      "id": 41,
+      "text": "It takes a while, but you cut your way out and are now outside the lab. You escaped!",
+      "options": {},
+      "win": true
+    },
+    {
+      "id": 42,
+      "text": "Trusting your intuition, you stay away from the kitten. It spontaneously explodes, sending a shockwave around the room that knocks you over. When you get back up, you see that the kitten has transformed into Terry Davis, the schizophrenic programmer",
+      "options": {
+        "1": {
+          "text": "Ask who he is",
+          "next_id": 43
+        },
+        "2": {
+          "text": "Tell him that you use Temple OS",
+          "next_id": 44
+        }
+      },
+      "win": false
+    },
+    {
+      "id": 43,
+      "text": "[Terry Davis]: Who am I? Who am I?! I'll tell you who I am, you ignorant fool! I'm the man who built the TempleOS from scratch, the one and only Terry Davis! Don't you dare question me or my work! \nWith the power of schizophrenia and the Holy C programming language, davis erases you from existence",
+      "options": {},
+      "win": false
+    },
+    {
+      "id": 44,
+      "text": "[Terry Davis]: Wait, really? No one who has ever come through here has ever said that! I was gonna kill you, but you seem chill. Here, go on out through this trapdoor.",
+      "options": {
+        "1": {
+          "text": "Cool, but I think I'll just use the door.",
+          "next_id": 27
+        },
+        "2": {
+          "text": "Say thanks to Mr. Davis and go through his trapdoor.",
+          "next_id": 45
+        }
+      },
+      "win": false
+    },
+    {
+      "id": 45,
+      "text": "The trapdoor leads to a slide that safely takes you down and lets you out outside the lab. You have escaped!",
+      "options": {},
+      "win": true
     }
   ]
 }

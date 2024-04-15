@@ -10,6 +10,7 @@
 + Anyone is also free to make their own compatible creator, as long as the data it outputs matches the format as well.
   + Please note that the `win` key must exist on every entry, regardless of if it's an ending or not. 
   + Also, ensure that the options key also exists in every entry. For ending cards, simply have it be an empty object.
+  + The option text supports any characters and formatting that the user's standard output is capable of handling. This includes line breaks (`\n`), and various special characters.
   + For any formatting clarifications, check the JSON section of the creator interface, as it is (probably) always correct.
 
 
