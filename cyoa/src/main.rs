@@ -3,8 +3,10 @@ use slowprint::slow_print;
 use std::collections::HashMap;
 use std::env;
 use std::fs;
+use std::io::stdout;
 use std::io::{self, Write};
 use std::time::Duration;
+use termcolor::{Color, ColorChoice, ColorSpec, StandardStream, WriteColor};
 use textwrap::fill;
 
 // defining all multiline strings here (instead of before theyre called) bc why not
@@ -58,15 +60,34 @@ struct GameData {
     entries: Vec<Entry>,
 }
 
+// function for printing a win or loss with color
+/*
+fn print_with_color(color: &str, text: &str) {
+    if color == "red" {
+
+    } else if color == "green" {
+
+    } else {
+        eprintln!("Invalid color specified in a call to print_with_color")
+    }
+}
+*/
 // Function to load game data from embedded JSON string (for whatever reason cargo only includes it in the build if we do it this way)
 fn load_game_data_from_str(json_str: &str) -> Result<GameData, Box<dyn std::error::Error>> {
     let game_data: GameData = serde_json::from_str(json_str)?;
     Ok(game_data)
 }
 
+fn print_options(entry_id: &Entry) {
+    println!("\nChoose an option:");
+    for (i, option) in entry_id.options.iter() {
+        println!("{}. {}", i, option.text);
+    }
+    println!("> ")
+}
+
 fn main() {
     println!("{}", START_MSG);
-
     let game_data_json_str = include_str!("game_data.json"); // initial value for JSON. overwritten if provided path exists/is valid.
 
     //get first environment arg and determine if its a valid path
@@ -88,7 +109,7 @@ fn main() {
                 return;
             }
         }
-        //user is stupid and/or can't read and supplied a bad file. Use default instead, because we have to do everything for people these days smh
+        //user is stupid and/or can't read, and supplied a bad file. Use default instead, because we have to do everything for people these days smh
         None => match load_game_data_from_str(game_data_json_str) {
             Ok(data) => data,
             Err(e) => {
@@ -150,13 +171,8 @@ fn main() {
         if current_entry.win == true {
             return;
         } else {
-            println!("\nChoose an option:");
+            print_options(current_entry);
 
-            for (i, option) in current_entry.options.iter() {
-                println!("{}. {}", i, option.text);
-            }
-
-            print!("> ");
             io::stdout().flush().unwrap();
 
             let mut input = String::new();
