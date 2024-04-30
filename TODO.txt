@@ -1,4 +1,0 @@
-finish ap writing - https://docs.google.com/document/d/1CRIbXo55hn7Vve-FeuT0izOqSWf_gBgLRZXO_z8Hp0A/edit
-RUST
-function with loop, input that isnt main.
-REACT
