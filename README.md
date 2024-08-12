@@ -65,8 +65,8 @@
 + ### Creator
   + React webapp bootstrapped with create-react-app
   + As much of the styling as possible handled with TailwindCSS
-  + the tailwind command (from the ./creator directory) is `npx tailwindcss -o src/index.css --watch`
-  + Before any commits, run `grunt` to minify css
+  + the tailwind command (from the ./creator directory) is `npx tailwindcss -o src/index.css --watch --minify`
+
 + ### Reader
   + Code is pretty messy since I barely know rust
   + Do not expect adherence to best practices lol
