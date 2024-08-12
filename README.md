@@ -38,7 +38,7 @@
    ]
 }
 ```
-+ The JSON data is theoretically infinitely scalable (I don't see any reason why it wouldn't be), with as many entries as you want.
++ The JSON data is theoretically infinitely scalable (I don't see any reason why it wouldn't be, other than system resource availability), with as many entries as you want.
 
 ## Reader information
 + code is under `./cyoa`
